@@ -39,6 +39,26 @@ exemplo:
 ```
 SET "resultado_1" 100 "resultado_2" 200 "resultado_3" 300
 ```
+#### Adicionar e buscar e deletar HASH de registro
+Para adicionar vários registro seguimos o seguindo padrão: ```HSET <chave1> <chave2> <valor>```, a chave 1 e 2 serão usadas como hash.
+
+exemplo:
+```
+HSET "2022-07-12" "disciplina" "java"
+HSET "2022-07-12" "horario" "14h"
+HSET "2022-08-30" "disciplina" "react"
+```
+
+Para buscar um hash usamos o  ```HGET```, ele retornará os valores de acordo com as informações da chave 1 e 2 no seguinte padrão: ```HGET <chave1> <chave2>```
+exemplo:
+```
+HGET "2022-07-12" "disciplina"
+```
+Resultado:
+```
+"2022-07-12" "disciplina" "java"
+```
+Para Deletar utiliza-se o comando com a sintaxe: ```HDEL <chave1> <chave2>```  exemplo: ```HDEL "2022-08-30" "disciplina"``` 
 
 #### Buscas personalizadas
 Buscar sorteios da Mega-Sena que ocorreram nos dias terminados em "3" ou em "7".
