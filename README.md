@@ -1,4 +1,7 @@
 # Banco de Dados Redis
+
+### Instalação e Utilização
+instalar o Redis no docker com o comando ```docker pull redis``` , e depois de executar utilizar o comando ```redis-cli```
 ### Comandos
 
 #### Adicionar registro único
