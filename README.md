@@ -96,4 +96,5 @@ Mas queremos pesquisar os dois ao mesmo tempo, então usamos "[]" (colchetes):
 ```
 ## Manipulando dados
 #### Incremento e decremento de valor
-Para incrementar utilize o seguinte padrão: ```INCR <chave>```. E para decrementar utilize o ```DECR <chave>```
++ Para incrementar em +1, utilize o seguinte padrão: ```INCR <chave>```. E para decrementar em -1 utilize o ```DECR <chave>```
++ Para incrementar em x valor, utilize o seguinte padrão: ```INCRBY <chave> <valor>```. E para decrementar em x valor utilize o ```DECRBY <chave> <valor>```
