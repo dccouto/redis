@@ -94,3 +94,6 @@ Mas queremos pesquisar os dois ao mesmo tempo, então usamos "[]" (colchetes):
 1) "resultado:03-05-2015:megasena"
 2) "resultado:17-05-2015:megasena"
 ```
+## Manipulando dados
+#### Incremento e decremento de valor
+Para incrementar utilize o seguinte padrão: ```INCR <chave>```. E para decrementar utilize o ```DECR <chave>```
