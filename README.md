@@ -68,6 +68,20 @@ exemplo:
  HMSET <hash> <chave> <valor> <chave> <valor> <chave> <valor>
   HMSET "2022-07-01" "Nome" "Diego" "Sobrenome" "Couto" "github" "dccouto"
  ```
+ 
+#### Bitset
++ O ```SETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave> <valor_booleano>```
+exemplo:
+```
+SETBIT acesso:2022-07-12 10 1
+```
++ O ```GETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave> <valor_booleano>```
+exemplo:
+```
+GETBIT acesso:2022-07-12 10 1
+```
+Caso a chave não recebeu um valou 1 ela automaticamente será 0 quando realizar o ```GETBIT```
+
 #### Expirar registros
 Para expirar/deletar registros do banco do Redis, a sintaxe é ```EXPIRE <chave> <tempo_em_segundos>```
 exemplo:
