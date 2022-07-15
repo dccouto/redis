@@ -106,13 +106,35 @@ SETBIT acesso_sala:2022-07-13 2 1
 //fazendo o AND do dia 12 e 13
 BITOP AND acesso_sala:2022-07-12-e-13 acesso_sala:2022-07-12 acesso_sala:2022-07-13
 
-//verificandoo reusltado da operação AND mna qual irá mostrar qual a sala que teve acesso no dia 12 e 13
+//verificandoo reusltado da operação AND na qual irá mostrar qual a sala que teve acesso no dia 12 e 13
 GETBIT acesso_sala:2022-07-12-e-13 1
 (integer) 1 //Teve Acesso a sala nos 2 dias
 
 GETBIT acesso_sala:2022-07-12-e-13 2
 (integer) 0 //Não teve Acesso a sala nos 2 dias
 ```
+
+#### Operador OR
+Para aplicar operações(BITOP) de '||' utiliza-se o OR, de acordo com a seguinte sintasse ````BITOP OR <nova_hash_do_resultado> <hash1_que_ira_aplicar_o_OR> <hash2_que_ira_aplicar_o_OR>```
+
+exemplo:
+```
+//definindo acesso a sala 1 e 2
+SETBIT acesso_sala:2022-07-12 1 1
+SETBIT acesso_sala:2022-07-13 1 1
+SETBIT acesso_sala:2022-07-13 2 1
+
+//fazendo o OR do dia 12 e 13
+BITOP OR acesso_sala:2022-07-12-OU-13 acesso_sala:2022-07-12 acesso_sala:2022-07-13
+
+//verificandoo reusltado da operação OR na qual irá mostrar qual a sala que teve acesso no dia 12 ou 13
+GETBIT acesso_sala:2022-07-12-OU-13 1
+(integer) 1 //Teve Acesso a sala no dia 12 ou no dia 13
+
+GETBIT acesso_sala:2022-07-12-OU-13 2
+(integer) 1 //Teve Acesso a sala no dia 12 ou no dia 13
+```
+
 
 ## Expirar registros
 Para expirar/deletar registros do banco do Redis, a sintaxe é ```EXPIRE <chave> <tempo_em_segundos>```
