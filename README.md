@@ -72,12 +72,12 @@ exemplo:
  
 ## Bitset 
 #### Inserindo e lendo
-+ O ```SETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave> <valor_booleano>```
++ O ```SETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave_maior_que_0> <valor_booleano>```
 exemplo:
 ```
 SETBIT acesso:2022-07-12 10 1
 ```
-+ O ```GETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave> <valor_booleano>```
++ O ```GETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave_maior_que_0> <valor_booleano>```
 exemplo:
 ```
 GETBIT acesso:2022-07-12 10 1
