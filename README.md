@@ -171,14 +171,23 @@ Mas queremos pesquisar os dois ao mesmo tempo, então usamos "[]" (colchetes):
 ```DECRBYFLOAT <chave> <valor>```
 
 ## Listas, Ordenação e limites
-### Adicionando elementos na lista
+### Adicionando elementos na lista com Limites
 Para exemplificar irei tratar como uma lista de ultimas nootícias, onde as 3 ultimas notícias serão mantidas no Redis na seguinte regra: AS notícias recem inseridas ficaram no top, e só serão mantidas 3 notícias na lista.
-Para conseguir inserir uma notícia na lista e ela sendo a primeira, utiliza-se o comando ```LPUSH``` onde 'L' significa Left (primeira da lista) e 'PUSH' é o comando de inserir. A sintaxe é: ```LPUSH <chave> <valor> ``` 
+Para conseguir inserir uma notícia na lista e ela sendo a primeira, utiliza-se o comando ```LPUSH``` onde 'L' significa Left (primeira da lista) e 'PUSH' é o comando de inserir. 
+A sintaxe é ```LPUSH <chave> <valor> ``` 
+
 Exemplo:
 ```
 LPUSH ultimas-noticias "Estudo de Redis na segunda-feira."
+LPUSH ultimas-noticias "Estudo de Java na terça-feira."
+LPUSH ultimas-noticias "Estudo de AWS na quarta-feira."
+LPUSH ultimas-noticias "Estudo de Kafka na quinta-feira."
 ```
-
+de acordo com o exemplo proposto, para manter as três últimas notícias na lista de noticícas, é necessário manter as notícias da posição 0 a posição 2. O comando para cortar tudo que não estiver no intervalo desejado é o ```LTRIM```. A sintexe é ```LTRIM <chave> <posição_inicial , posição_final>```
+Exemplo:
+```
+LTRIM ultimas-noticias 0,2
+```
 
 
 
