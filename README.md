@@ -206,3 +206,14 @@ exemplo:
 LLEN ultimas-noticias
 ```
 
+#### LRANGE para pelar um range da Lista
+Para pegar o range de elementos da lista, utiliza-se o ```LRANGE``` de acordo com a seguinte sintaxe: ```LRANGE <chave> <posição_inicial , posição_final>```
+
+exemplo:
+```
+LRANGE ultimas-noticias 1,2
+Resultado:  "Estudo de Java na terça-feira."
+            "Estudo de AWS na quarta-feira."
+```
+
+
