@@ -169,3 +169,17 @@ Mas queremos pesquisar os dois ao mesmo tempo, então usamos "[]" (colchetes):
 ```DECRBY <chave> <valor>```
 + Para incrementar em x valor __float__ , utilize o seguinte padrão: ```INCRBYFLOAT <chave> <valor>```. E para decrementar em x valor __float__  utilize o 
 ```DECRBYFLOAT <chave> <valor>```
+
+## Listas, Ordenação e limites
+### Adicionando elementos na lista
+Para exemplificar irei tratar como uma lista de ultimas nootícias, onde as 3 ultimas notícias serão mantidas no Redis na seguinte regra: AS notícias recem inseridas ficaram no top, e só serão mantidas 3 notícias na lista.
+Para conseguir inserir uma notícia na lista e ela sendo a primeira, utiliza-se o comando ```LPUSH``` onde 'L' significa Left (primeira da lista) e 'PUSH' é o comando de inserir. A sintaxe é: ```LPUSH <chave> <valor> ``` 
+Exemplo:
+```
+LPUSH ultimas-noticias "Estudo de Redis na segunda-feira."
+```
+
+
+
+
+
