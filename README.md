@@ -188,7 +188,18 @@ Exemplo:
 ```
 LTRIM ultimas-noticias 0,2
 ```
+#### LINDEX para buscar um elemento da Lista
+Para pegar um elemento da lista pelo index, utiliza-se o ```LINDEX``` de acordo com a seguinte sintaxe: ```LINDEX <chave> <index>```
 
-
-
+exemplo:
+```
+LINDEX ultimas-noticias 1
+resultado: "Estudo de Java na terça-feira."
+```
+#### LLEN para saber o tamanho da Lista
+Para pegar o length da lista, utiliza-se o ```LLEN```  de acordo com a seguinte sintaxe: ```LLEN <chave>```
+exemplo:
+```
+LLEN ultimas-noticias
+```
 
