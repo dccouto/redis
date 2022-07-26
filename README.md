@@ -239,7 +239,7 @@ Resultado: "pessoa_1_@mail.com"
 ```
 
 ### Tratando o problema de Busy Wait (Espera ocupada)
-Qual tenta buscar alguém na fila e não tem ninguém e repete esse processo diversas vezes com o ```LPOP "fila:confirma-email"``` ocorre o provlema de ocupar processamento com diversas checagem na fila sem ter ninguém, pra resolver esse problemas podemos fazer uma busca na fila estipulando o tempo de espera com o comando ```BLPOP```, com esse comando definimos um tempo em que ele irá aguardar algum dado chegar na fila e com isso não irá travar processamento. A sintaxe do comnado é: ```BLPOP <chave> <tempo_em_segundos>```
+Qual tenta buscar alguém na fila e não tem ninguém e repete esse processo diversas vezes com o ```LPOP "fila:confirma-email"``` ocorre o provlema de ocupar processamento com diversas checagem na fila sem ter ninguém, pra resolver esse problemas podemos fazer uma busca na fila estipulando o tempo de espera com o comando ```BLPOP```, com esse comando definimos um tempo em que ele irá aguardar algum dado chegar na fila e com isso não irá travar processamento. A sintaxe do comnado é: ```BLPOP <chave> <tempo_em_segundos> (se colocar 0 é eterno)```
 
 Exemplo:
 ```
