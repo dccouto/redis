@@ -296,3 +296,12 @@ Exemplo:
 SREM "conexões-do-linkedin:Diego" Karem
 Resultado: 0
 ```
+
+### Intersecção de conjunto
+O comando para descobrir a intersecção(elementos que se repetem nos 2 conjuntos) entre dois conjuntos é ```SINTER```, a sintaxe é ```SINTER <chave> <chave>```
+
+Exemplo:
+```
+SINTER "conexões-do-linkedin:Diego" "conexões-do-linkedin:Juliana"
+Resultado: 1) Clara
+```
