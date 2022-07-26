@@ -247,3 +247,32 @@ BLPOP "fila:confirma-email" 30
 Resultado: "pessoa_5_@mail.com"
 (12segundos_depois)
 ```
+
+## Conjunto de elementos
+
+#### Adicionando itens no conjunto
+O conjunto não possui elementos repetidos, para adicionar um item em um conjunto, utiliza-se ```SADD``` (como se fosse um add no SetList). A sintaxe do comando é: ```SADD <chave> <valor>```
+Exemplo:
+```
+SADD "conexões-do-linkedin:Diego" "Julia"
+Resultado: (integer) 1
+SADD "conexões-do-linkedin:Diego" "Ana"
+Resultado: (integer) 2
+```
+#### Total de itens no conjunto
+O camando para pegar o número de elementos que tem no conjunto é o ```SCARD```,(card de cardinalidade) a sintaxe é ```SCARD <chave>```
+
+Exemplo:
+```
+SCARD "conexões-do-linkedin:Diego" 
+Resultado: (integer) 2
+```
+#### Listar membros do conjunto
+O camando para listar os membros do conjunto (não é ordenada) é o ```SMEMBERS```, a sintaxe é ```SMEMBERS <chave>```
+
+Exemplo:
+```
+SMEMBERS "conexões-do-linkedin:Diego" 
+Resultado: 1) Julia
+           2) Ana
+```
