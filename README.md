@@ -216,4 +216,24 @@ Resultado:  "Estudo de Java na terça-feira."
             "Estudo de AWS na quarta-feira."
 ```
 
+## Fila
+Para exemplificar irei tratar como uma fila para atendimento que será mantidaa no Redis na seguinte regra: O primeiro a entrar na fila é o primeiro a ser atendido.
+### Adicionando elementos na fila
+#### RPUSH para adicionar elementos no fim da fila
+Para adicionar um elemento no final da fila utiliza-se o comando ```RPUSH```, a sintaxe do comando é: ```RPUSH <chave> <valor>```
 
+Exemplo:
+```
+RPUSH "fila:confirma-email" "pessoa_1_@mail.com"
+RPUSH "fila:confirma-email" "pessoa_2_@mail.com"
+RPUSH "fila:confirma-email" "pessoa_3_@mail.com"
+RPUSH "fila:confirma-email" "pessoa_4_@mail.com"
+```
+### Consumindo elementos da fila
+#### LPOP para pegar e retirar um elemento da fila
+Para pegar e retitar o primeiro elemento da fila utiliza-se o ```LPOP```. A sintaxe é ```LPOP <chave>```
+Exemplo:
+```
+LPOP "fila:confirma-email"
+Resultado: "pessoa_1_@mail.com"
+```
