@@ -260,7 +260,7 @@ SADD "conexões-do-linkedin:Diego" "Ana"
 Resultado: (integer) 2
 ```
 #### Total de itens no conjunto
-O camando para pegar o número de elementos que tem no conjunto é o ```SCARD```,(card de cardinalidade) a sintaxe é ```SCARD <chave>```
+O comando para pegar o número de elementos que tem no conjunto é o ```SCARD```,(card de cardinalidade) a sintaxe é ```SCARD <chave>```
 
 Exemplo:
 ```
@@ -268,11 +268,31 @@ SCARD "conexões-do-linkedin:Diego"
 Resultado: (integer) 2
 ```
 #### Listar membros do conjunto
-O camando para listar os membros do conjunto (não é ordenada) é o ```SMEMBERS```, a sintaxe é ```SMEMBERS <chave>```
+O comando para listar os membros do conjunto (não é ordenada) é o ```SMEMBERS```, a sintaxe é ```SMEMBERS <chave>```
 
 Exemplo:
 ```
 SMEMBERS "conexões-do-linkedin:Diego" 
 Resultado: 1) Julia
            2) Ana
+```
+
+#### Verificar se elemmento já é membros do conjunto
+O comando para verificar se o valor já é um membro do conjunto é o ```SISMEMBER```, a sintaxe é ```SISMEMBER <chave> <valor>```
+
+Exemplo:
+```
+SISMEMBER "conexões-do-linkedin:Diego" Karem
+Resultado: 0
+SISMEMBER "conexões-do-linkedin:Diego" Julia
+Resultado: 1
+```
+
+#### Remover um membro do conjunto
+O comando para remover um membro do conjunto é o ```SREM```, a sintaxe é ```SREM <chave> <valor>```
+
+Exemplo:
+```
+SREM "conexões-do-linkedin:Diego" Karem
+Resultado: 0
 ```
