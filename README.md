@@ -298,10 +298,24 @@ Resultado: 0
 ```
 
 ### Intersecção de conjunto
-O comando para descobrir a intersecção(elementos que se repetem nos 2 conjuntos) entre dois conjuntos é ```SINTER```, a sintaxe é ```SINTER <chave> <chave>```
+O comando para descobrir a intersecção(elementos que se __repetem__ nos 2 conjuntos) entre dois conjuntos é ```SINTER```, a sintaxe é ```SINTER <chave> <chave>```
 
 Exemplo:
 ```
 SINTER "conexões-do-linkedin:Diego" "conexões-do-linkedin:Juliana"
 Resultado: 1) Clara
 ```
+
+### Diferença entre conjunto
+O comando para descobrir a diferença(elementos que __não__ se repetem nos 2 conjuntos) entre dois conjuntos é ```SDIFF```, a sintaxe é ```SDIFF <chave> <chave>```
+
+Exemplo:
+```
+
+Fulano = (Zé, Beltrano, Deltrano)
+Ciclano = (Zé)
+SINTER "conexões-do-linkedin:Fulano" "conexões-do-linkedin:Ciclano"
+Resultado: 1) Beltrano
+           2) Deltrano
+```
+
