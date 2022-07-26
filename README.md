@@ -277,7 +277,7 @@ Resultado: 1) Julia
            2) Ana
 ```
 
-#### Verificar se elemmento já é membros do conjunto
+#### Verificar se elemento já é membros do conjunto
 O comando para verificar se o valor já é um membro do conjunto é o ```SISMEMBER```, a sintaxe é ```SISMEMBER <chave> <valor>```
 
 Exemplo:
@@ -319,3 +319,16 @@ Resultado: 1) Beltrano
            2) Deltrano
 ```
 
+### União entre conjunto
+O comando para descobrir a união entre dois conjuntos é ```SUNION ```, a sintaxe é ```SUNION  <chave> <chave>```
+
+Exemplo:
+```
+
+Fulano = (Zé, Beltrano, Deltrano)
+Ciclano = (Zé)
+SUNION "conexões-do-linkedin:Fulano" "conexões-do-linkedin:Ciclano"
+Resultado: 1) Beltrano
+           2) Deltrano
+           3) Zé
+```
