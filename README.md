@@ -60,6 +60,7 @@ Resultado:
 "2022-07-12" "disciplina" "java"
 ```
 Para __Deletar__ utiliza-se o comando com a sintaxe: ```HDEL <hash> <chave>```  exemplo: ```HDEL "2022-08-30" "disciplina"``` 
+Para trazer todos os dados de uma chave uliliza-se os __HGETALL__
 
 #### Adicionar Multiplos Registros de uma só vez com HASH
 para adicionar multiplos registros hash de uma só vez, utiliza-se a sintaxe: ```HMSET <hash> <chave> <valor> <chave> <valor> <chave> <valor>```
