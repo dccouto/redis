@@ -71,6 +71,9 @@ exemplo:
   HMSET "2022-07-01" "Nome" "Diego" "Sobrenome" "Couto" "github" "dccouto"
  ```
  
+## Descobrindo o tipo da chave
+Para descolbri o tipo da <chave> utliza-se o comando ```TYPE <chave>```
+ 
 ## Bitset 
 #### Inserindo e lendo
 + O ```SETBIT``` permite que adicione informação booleanas a um registro, a sintaxe é ```SETBIT <hash> <chave_maior_que_0> <valor_booleano>```
