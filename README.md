@@ -72,7 +72,7 @@ exemplo:
  ```
  
 ## Descobrindo o tipo da chave
-Para descolbri o tipo da <chave> utliza-se o comando ```TYPE <chave>```
+Para descolbri o tipo da ```<chave>``` utliza-se o comando ```TYPE <chave>```
  
 ## Bitset 
 #### Inserindo e lendo
